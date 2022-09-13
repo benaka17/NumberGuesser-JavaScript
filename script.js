@@ -11,8 +11,6 @@ let random = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
 
-const finger = "🖕";
-
 document.querySelector(".check").addEventListener("click", function (){
     const guess = Number(document.querySelector(".guess").value);
 
@@ -39,7 +37,7 @@ document.querySelector(".check").addEventListener("click", function (){
             document.querySelector(".score").textContent = String(score);
         }
     } else {
-        document.querySelector(".message").textContent = finger + " You lost.";
+        document.querySelector(".message").textContent = "🧨 You lost.";
         setTimeout(function () {
             refresh();
         }, 2000);
